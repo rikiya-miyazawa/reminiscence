@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  validates :user_image, presence: true
   validates :name,  presence: true, length: { maximum: 30 }
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
@@ -6,4 +7,6 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, length: { minimum: 6 }
   has_many :pictures
+  has_many :favorites, dependent: :destroy
+  mount_uploader :user_image, ImageUploader 
 end

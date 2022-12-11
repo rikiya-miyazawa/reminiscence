@@ -2,11 +2,11 @@
 
 <p>メールアドレス: <%= @user.email %></p>
 
-<p>プロフィール画像</p>
-
-<p>プロフィール画像登録はコチラ</p>
+<p>プロフィール画像:<%= image_tag @user.user_image.url %></p>
 
 <p>プロフィール編集はコチラ</p>
+<%= link_to "プロフィールを編集する", edit_user_path(@user.id) %>
+<br>
 <%= link_to '新しく投稿する', new_picture_path %>
 <%= link_to '投稿一覧', pictures_path %>
 
