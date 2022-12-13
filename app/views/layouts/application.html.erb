@@ -15,7 +15,7 @@
       <nav class="navigation">
         <div class="header-logo">
           <%= link_to("Reminiscence", new_session_path) %>
-          <%= image_tag '/assets/baby-reminiscence.png', :size => '40x30'%>
+          <%= image_tag 'reminisence-icon.png', :size => '40x30'%>
         </div>
         <ul class="header-menus">
           <% if logged_in? %>
@@ -42,6 +42,7 @@
     <div class="container">
     <%= yield %>
     </div>
+    <div class="push"></div>
     <footer>
       <ul class="footer-logo" >
         <li>
