@@ -40,3 +40,7 @@ gem 'mini_magick'
 gem 'dotenv-rails'
 gem 'rexml'
 gem 'faker'
+
+gem 'net-smtp'
+gem 'net-imap'
+gem 'net-pop'
