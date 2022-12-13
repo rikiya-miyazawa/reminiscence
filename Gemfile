@@ -21,7 +21,6 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
   gem 'spring'
-  gem 'letter_opener_web'
 end
 
 group :test do
@@ -32,6 +31,7 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem 'letter_opener_web'
 gem 'bcrypt'
 gem 'better_errors'
 gem 'binding_of_caller'
