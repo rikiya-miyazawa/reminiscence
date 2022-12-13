@@ -2,7 +2,13 @@
 
 <p>メールアドレス: <%= @user.email %></p>
 
-<p>プロフィール画像:<%= image_tag @user.user_image.url %></p>
+<p>プロフィール画像:
+<%= if @user.user_image.present?
+        image_tag @user.user_image.url 
+    else
+        image_tag "baby-reminiscence"
+    end
+        %></p>
 
 <%= link_to "プロフィールを編集する", edit_user_path(@user.id) %><br>
 <%= link_to 'お気に入り一覧', favorites_path %>
